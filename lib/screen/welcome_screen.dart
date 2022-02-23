@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widget/circular_welcome_screen.dart';
 import '../widget/pageView_welcom_Screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -10,30 +11,100 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+  late PageController _pageController;
+  int _currentPage = 0;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _pageController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: PageView(
-          children: const [
-            PageViewWelcomeScreen(
-              textTop: 'Lets get started',
-              textDownOne: 'Goals',
-              textDownTwo: 'Easy Of Ordering',
-              imageAsset: 'images/undraw_online_groceries_a02y.png',
+        child: Column(
+          children: [
+            Expanded(
+              child: PageView(
+                onPageChanged: (int pag) {
+                  setState(() {
+                    _currentPage = pag;
+                  });
+                },
+                controller: _pageController,
+                children: const [
+                  PageViewWelcomeScreen(
+                    textTop: 'Lets get started',
+                    textDownOne: 'Goals',
+                    textDownTwo: 'Easy Of Ordering',
+                    imageAsset: 'images/undraw_online_groceries_a02y.png',
+                  ),
+                  PageViewWelcomeScreen(
+                    textTop: 'Lets get started',
+                    textDownOne: 'Goals',
+                    textDownTwo: 'Access of speed',
+                    imageAsset: 'images/undraw_On_the_way_re_swjt.png',
+                  ),
+                  PageViewWelcomeScreen(
+                    textTop: 'Lets get started',
+                    textDownOne: 'Goals',
+                    textDownTwo: 'Accuracy in reaching poeple',
+                    imageAsset: 'images/undraw_My_location_re_r52x.png',
+                  ),
+                ],
+              ),
             ),
-            PageViewWelcomeScreen(
-              textTop: 'Lets get started',
-              textDownOne: 'Goals',
-              textDownTwo: 'Access of speed',
-              imageAsset: 'images/undraw_On_the_way_re_swjt.png',
+            Visibility(
+              visible: _currentPage == 2,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/LoginScreen');
+                },
+                child: const Text(
+                  'get start',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Color(0xFFFFFFFF),
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(192, 49),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  primary: const Color(0xFFFF3D00),
+                ),
+              ),
             ),
-            PageViewWelcomeScreen(
-              textTop: 'Lets get started',
-              textDownOne: 'Goals',
-              textDownTwo: 'Accuracy in reaching poeple',
-              imageAsset: 'images/undraw_online_groceries_a02y.png',
+            const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircularWelcomeScreen(
+                  margin: 10,
+                  selected: _currentPage == 0,
+                ),
+                CircularWelcomeScreen(
+                  margin: 10,
+                  selected: _currentPage == 1,
+                ),
+                CircularWelcomeScreen(
+                  margin: 20,
+                  selected: _currentPage == 2,
+                ),
+              ],
             ),
+            const SizedBox(height: 20),
           ],
         ),
       ),

@@ -16,14 +16,35 @@ class PageViewWelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(textTop),
-        Image.asset(imageAsset),
-        Text(textDownOne),
-        Text(textDownTwo),
-      ],
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(
+        start: 5,
+        end: 5,
+        top: 5,
+        bottom: 5,
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            textTop,
+            style: const TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 28,
+              color: Color(0xFFFF3D00),
+            ),
+          ),
+          const SizedBox(height: 73),
+          Image.asset(
+            imageAsset,
+          ),
+          const SizedBox(height: 28),
+          Text(textDownOne),
+          const SizedBox(height: 7),
+          Text(textDownTwo),
+        ],
+      ),
     );
   }
 }
+//const SizedBox(height: 137.4),

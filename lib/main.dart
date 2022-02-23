@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saja/screen/Login_screen.dart';
 import 'package:saja/screen/splash_screen.dart';
 import 'package:saja/screen/welcome_screen.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/SplashScreen': (context) => const SplashScreen(),
         '/WelcomeScreen': (context) => const WelcomeScreen(),
+        '/LoginScreen': (context) => const LoginScreen(),
       },
     );
   }
