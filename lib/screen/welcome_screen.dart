@@ -32,7 +32,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Expanded(
               child: PageView(
@@ -66,6 +66,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             ),
             Visibility(
               visible: _currentPage == 2,
+              maintainState: true,
+              maintainAnimation: true,
+              maintainSize: true,
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, '/LoginScreen');
@@ -104,7 +107,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
           ],
         ),
       ),

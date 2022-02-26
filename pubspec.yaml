@@ -62,6 +62,10 @@ flutter:
     - images/undraw_My_location_re_r52x.png
     - images/undraw_On_the_way_re_swjt.png
     - images/undraw_online_groceries_a02y.png
+    - images/Group 728.png
+    - images/Group 729.png
+    - images/Mask Group 9.png
+    - images/Mask Group 10.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

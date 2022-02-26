@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -9,27 +10,39 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, '/WelcomeScreen');
-    });
-  }
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   Future.delayed(const Duration(seconds: 3), () {
+  //     Navigator.pushReplacementNamed(context, '/WelcomeScreen');
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xFFFAFAFA),
-      body: Center(
-        child: Text(
-          '2eat resturant',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 28,
-            color: Color(0xFF08063A),
+    return Scaffold(
+      backgroundColor: const Color(0xFFFAFAFA),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Column(
+            children: [
+              Image.asset('images/Group 728.png'),
+              const SizedBox(height: 15),
+              const Center(
+                child: Text(
+                  '2eat resturant',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28,
+                    color: Color(0xFF08063A),
+                  ),
+                ),
+              ),
+              Image.asset('images/Mask Group 10.png'),
+            ],
           ),
-        ),
+        ],
       ),
     );
   }
