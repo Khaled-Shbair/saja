@@ -10,13 +10,13 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   Future.delayed(const Duration(seconds: 3), () {
-  //     Navigator.pushReplacementNamed(context, '/WelcomeScreen');
-  //   });
-  // }
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, '/WelcomeScreen');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
