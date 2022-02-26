@@ -11,16 +11,11 @@ class CircularWelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsetsDirectional.only(end: margin),
-      height: 10,
-      width: 10,
-      decoration: BoxDecoration(
-        boxShadow: const [
-        ],
-        color: selected ? const Color(0xFFFF3D00) : const Color(0xFFFAFAFA),
-        borderRadius: BorderRadius.circular(10),
-      ),
+    return TabPageSelectorIndicator(
+      backgroundColor:
+          selected ? const Color(0xFFFF3D00) : const Color(0xFFFAFAFA),
+      borderColor: const Color(0xFFFF3D00),
+      size: 10,
     );
   }
 }
