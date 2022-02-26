@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:saja/screen/Forget_Password_Change_Password_Screen.dart';
+import 'package:saja/screen/Forget_Password_Code_Phone_Screen.dart';
+import 'package:saja/screen/Forget_Password_Screen.dart';
 import 'package:saja/screen/Login_screen.dart';
+import 'package:saja/screen/Sing_Up_Screen.dart';
 import 'package:saja/screen/splash_screen.dart';
 import 'package:saja/screen/welcome_screen.dart';
 
@@ -17,6 +21,10 @@ class MyApp extends StatelessWidget {
         '/SplashScreen': (context) => const SplashScreen(),
         '/WelcomeScreen': (context) => const WelcomeScreen(),
         '/LoginScreen': (context) => const LoginScreen(),
+        '/SingUpScreen': (context) => const SingUpScreen(),
+        '/ForgetPasswordScreen': (context) => const ForgetPasswordScreen(),
+        '/ForgetPasswordCodePhoneScreen': (context) => const ForgetPasswordCodePhoneScreen(),
+        '/ForgetPasswordChangePasswordScreen': (context) => const ForgetPasswordChangePasswordScreen(),
       },
     );
   }

@@ -71,7 +71,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               maintainSize: true,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/LoginScreen');
+                  Navigator.pushReplacementNamed(context, '/SingUpScreen');
                 },
                 child: const Text(
                   'get start',
