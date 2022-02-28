@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/Button_Login.dart';
-import '../widget/Card_Login.dart';
 import '../widget/Text_Field_Login.dart';
 
 class SingUpScreen extends StatefulWidget {
@@ -178,15 +176,15 @@ class _SingUpScreenState extends State<SingUpScreen> {
     );
   }
 
-  void _performLogin() {
-    if (_checkData()) {
-      _login();
-    }
-  }
-
-  bool _checkData() {
-    return false;
-  }
-
-  void _login() {}
+  // void _performLogin() {
+  //   if (_checkData()) {
+  //     _login();
+  //   }
+  // }
+  //
+  // bool _checkData() {
+  //   return false;
+  // }
+  //
+  // void _login() {}
 }
