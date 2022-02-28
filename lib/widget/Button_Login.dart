@@ -26,7 +26,7 @@ class ButtonLogin extends StatelessWidget {
           top: 13,
           bottom: 13,
         ),
-        shadowColor: Colors.yellow,
+        elevation: 2,
         primary: const Color(0xFFFF3D00),
         minimumSize: const Size(double.infinity, 55),
         shape: RoundedRectangleBorder(
@@ -36,15 +36,4 @@ class ButtonLogin extends StatelessWidget {
     );
   }
 
-  void _performLogin() {
-    if (_checkData()) {
-      _login();
-    }
-  }
-
-  bool _checkData() {
-    return false;
-  }
-
-  void _login() {}
 }

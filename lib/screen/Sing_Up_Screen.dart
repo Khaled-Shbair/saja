@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../widget/Button_Login.dart';
+import '../widget/Card_Login.dart';
 import '../widget/Text_Field_Login.dart';
 
 class SingUpScreen extends StatefulWidget {
@@ -10,6 +13,25 @@ class SingUpScreen extends StatefulWidget {
 }
 
 class _SingUpScreenState extends State<SingUpScreen> {
+  late TextEditingController _emailEditingController;
+  late TextEditingController _passWordEditingController;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _emailEditingController = TextEditingController();
+    _passWordEditingController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _emailEditingController.dispose();
+    _passWordEditingController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +67,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                   start: 35,
                   end: 35,
                   top: 150,
-                 // bottom: 250,
+                  // bottom: 250,
                 ),
                 padding: const EdgeInsetsDirectional.only(
                   start: 20,
@@ -55,61 +77,95 @@ class _SingUpScreenState extends State<SingUpScreen> {
                   color: const Color(0xFFFFFFFF),
                   borderRadius: BorderRadiusDirectional.circular(50),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: ListView(
+                  padding: const EdgeInsetsDirectional.only(
+                    top: 40,
+                  ),
+                  //mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
                       'Sign up',
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color(0xFFFF3D00),
                         fontSize: 20,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    // const TextFieldLogin(
-                    //   textInputType: TextInputType.emailAddress,
-                    //   prefixIcon: Icon(Icons.email),
-                    //   hintText: 'Username',
-                    // ),
-                    // const SizedBox(height: 20),
-                    // const TextFieldLogin(
-                    //   textInputType: TextInputType.emailAddress,
-                    //   prefixIcon: Icon(Icons.email),
-                    //   hintText: 'Email',
-                    // ),
-                    // const SizedBox(height: 20),
-                    // TextField(
-                    //   keyboardType: TextInputType.visiblePassword,
-                    //   obscureText: false,
-                    //   decoration: InputDecoration(
-                    //     contentPadding: const EdgeInsetsDirectional.only(
-                    //       top: 15,
-                    //       bottom: 15,
-                    //     ),
-                    //     border: UnderlineInputBorder(
-                    //       borderRadius: BorderRadius.circular(80),
-                    //       borderSide: BorderSide.none,
-                    //     ),
-                    //     fillColor: const Color(0xFFF4F3F3),
-                    //     filled: true,
-                    //     prefixIcon: const Icon(Icons.lock),
-                    //     prefixIconColor: const Color(0xFFF7C5B6),
-                    //     suffixIcon: const Icon(Icons.remove_red_eye_outlined),
-                    //     hintText: 'Password',
-                    //     hintStyle: const TextStyle(
-                    //       color: Color(0xFFF7C5B6),
-                    //       fontSize: 20,
-                    //       fontWeight: FontWeight.w400,
-                    //     ),
-                    //   ),
-                    // ),
-                    //
+                    const SizedBox(height: 27),
+                    const TextFieldLogin(
+                     // textEditingController: _emailEditingController,
+                      textInputType: TextInputType.emailAddress,
+                      prefixIcon: Icon(Icons.email),
+                      hintText: 'Username',
+                    ),
+                    const SizedBox(height: 20),
+                    const TextFieldLogin(
+                      textInputType: TextInputType.emailAddress,
+                      prefixIcon: Icon(Icons.email),
+                      hintText: 'Email',
+                    ),
+                    const SizedBox(height: 20),
+                    TextField(
+                      keyboardType: TextInputType.visiblePassword,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        contentPadding: const EdgeInsetsDirectional.only(
+                          top: 15,
+                          bottom: 15,
+                        ),
+                        border: UnderlineInputBorder(
+                          borderRadius: BorderRadius.circular(80),
+                          borderSide: BorderSide.none,
+                        ),
+                        fillColor: const Color(0xFFF4F3F3),
+                        filled: true,
+                        prefixIcon: const Icon(Icons.lock),
+                        prefixIconColor: const Color(0xFFF7C5B6),
+                        suffixIcon: const Icon(Icons.remove_red_eye_outlined),
+                        hintText: 'Password',
+                        hintStyle: const TextStyle(
+                          color: Color(0xFFF7C5B6),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    ButtonLogin(
+                      text: 'Sign up ',
+                      function: () {},
+                    ),
+                    const SizedBox(height: 24),
                     const Text(
                       'or Log in with',
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: Color(0xFF08063A),
+                      ),
+                    ),
+                    Center(
+                      child: RichText(
+                        text: const TextSpan(
+                          text: 'Have any account ? ',
+                          style: TextStyle(
+                            color: Color(0xFF08063A),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: 'Login',
+                              style: TextStyle(
+                                color: Color(0xFFFF3D00),
+                                fontSize: 15,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -121,4 +177,16 @@ class _SingUpScreenState extends State<SingUpScreen> {
       ),
     );
   }
+
+  void _performLogin() {
+    if (_checkData()) {
+      _login();
+    }
+  }
+
+  bool _checkData() {
+    return false;
+  }
+
+  void _login() {}
 }
