@@ -5,21 +5,21 @@ class TextFieldLogin extends StatelessWidget {
     required this.prefixIcon,
     required this.hintText,
     required this.textInputType,
-  //  required this.textEditingController,
+    //  required this.textEditingController,
     Key? key,
   }) : super(key: key);
   final Icon prefixIcon;
 
-  //final Icon suffixIcon;
   final String hintText;
   final TextInputType textInputType;
+
   //final TextEditingController textEditingController;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       keyboardType: textInputType,
-    //  controller:textEditingController,
+      //  controller:textEditingController,
       decoration: InputDecoration(
         contentPadding: const EdgeInsetsDirectional.only(
           top: 15,

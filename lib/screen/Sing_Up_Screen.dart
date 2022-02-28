@@ -75,7 +75,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                 ),
                 decoration: BoxDecoration(
                   color: const Color(0xFFFFFFFF),
-                  borderRadius: BorderRadiusDirectional.circular(50),
+                  borderRadius: BorderRadiusDirectional.circular(20),
                 ),
                 child: ListView(
                   padding: const EdgeInsetsDirectional.only(
