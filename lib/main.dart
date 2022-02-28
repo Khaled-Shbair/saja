@@ -16,12 +16,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute:'/ForgetPasswordChangePasswordScreen',
+      initialRoute:'/LoginScreen',
       routes: {
         '/SplashScreen': (context) => const SplashScreen(),
         '/WelcomeScreen': (context) => const WelcomeScreen(),
-       // '/LoginScreen': (context) => const LoginScreen(),
-        //'/SingUpScreen': (context) => const SingUpScreen(),
+        '/SingUpScreen': (context) => const SingUpScreen(),
+        '/LoginScreen': (context) => const LoginScreen(),
         '/ForgetPasswordScreen': (context) => const ForgetPasswordScreen(),
         '/ForgetPasswordCodePhoneScreen': (context) => const ForgetPasswordCodePhoneScreen(),
         '/ForgetPasswordChangePasswordScreen': (context) => const ForgetPasswordChangePasswordScreen(),
