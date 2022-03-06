@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:saja/screen/Forget_Password_Change_Password_Screen.dart';
 import 'package:saja/screen/Forget_Password_Code_Phone_Screen.dart';
 import 'package:saja/screen/Forget_Password_Screen.dart';
+import 'package:saja/screen/Home_screen.dart';
 import 'package:saja/screen/Login_screen.dart';
 import 'package:saja/screen/Sing_Up_Screen.dart';
 import 'package:saja/screen/splash_screen.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute:'/ForgetPasswordChangePasswordScreen',
+      initialRoute: '/HomeScreen',
       routes: {
         '/SplashScreen': (context) => const SplashScreen(),
         '/WelcomeScreen': (context) => const WelcomeScreen(),
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         '/ForgetPasswordScreen': (context) => const ForgetPasswordScreen(),
         '/ForgetPasswordCodePhoneScreen': (context) => const ForgetPasswordCodePhoneScreen(),
         '/ForgetPasswordChangePasswordScreen': (context) => const ForgetPasswordChangePasswordScreen(),
+        '/HomeScreen': (context) => const HomeScreen(),
       },
     );
   }

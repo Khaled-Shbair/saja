@@ -32,7 +32,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Expanded(
               child: PageView(
@@ -96,14 +97,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 CircularWelcomeScreen(
                   margin: 10,
                   selected: _currentPage == 0,
+                  colorEmpty: const Color(0xFFFAFAFA),
+                  colorFull: const Color(0xFFFF3D00),
                 ),
                 CircularWelcomeScreen(
                   margin: 10,
                   selected: _currentPage == 1,
+                  colorEmpty: const Color(0xFFFAFAFA),
+                  colorFull: const Color(0xFFFF3D00),
                 ),
                 CircularWelcomeScreen(
                   margin: 20,
                   selected: _currentPage == 2,
+                  colorEmpty: const Color(0xFFFAFAFA),
+                  colorFull: const Color(0xFFFF3D00),
                 ),
               ],
             ),
