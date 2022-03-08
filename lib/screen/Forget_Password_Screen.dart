@@ -72,11 +72,11 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                         ),
                       ),
                       const SizedBox(height: 3),
-                      const Text(
-                        'Enter your Email address or\n mobile phone to reset the password',
+                       Text(
+                        '\nEnter your Email address or\n mobile phone to reset the password',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Color(0xFFFF3D00),
+                          color: Colors.deepOrange.shade200,
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
                         ),

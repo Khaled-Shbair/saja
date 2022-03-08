@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widget/Button_Login.dart';
+import '../widget/Card_Login.dart';
 import '../widget/Text_Field_Login.dart';
 
 class SingUpScreen extends StatefulWidget {
@@ -60,7 +61,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                     margin: const EdgeInsetsDirectional.only(
                       start: 35,
                       end: 35,
-                      // bottom: 200,
+                       bottom: 150,
                     ),
                     padding: const EdgeInsetsDirectional.only(
                       start: 20,
@@ -75,7 +76,6 @@ class _SingUpScreenState extends State<SingUpScreen> {
                       padding: const EdgeInsetsDirectional.only(
                         top: 40,
                       ),
-                      //mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text(
                           'Sign up',
@@ -144,7 +144,7 @@ class _SingUpScreenState extends State<SingUpScreen> {
                         ),
                         const SizedBox(height: 24),
                         const Text(
-                          'or Log in with',
+                          'or sign up with',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 13,
@@ -152,6 +152,25 @@ class _SingUpScreenState extends State<SingUpScreen> {
                             color: Color(0xFF08063A),
                           ),
                         ),
+                        const SizedBox(height: 5),
+                        Row(
+                          children: const [
+                            Expanded(
+                              child: CardLogin(
+                                title: 'Facebook',
+                                image: 'images/facebook.png',
+                              ),
+                            ),
+                            SizedBox(width: 5),
+                            Expanded(
+                              child: CardLogin(
+                                title: 'Google',
+                                image: 'images/google.png',
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 23),
                         Center(
                           child: RichText(
                             text: const TextSpan(

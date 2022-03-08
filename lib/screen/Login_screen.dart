@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widget/Button_Login.dart';
+import '../widget/Card_Login.dart';
 import '../widget/Text_Field_Login.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -44,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   margin: const EdgeInsetsDirectional.only(
                     start: 35,
                     end: 35,
-                    // bottom: 250,
+                    bottom: 230,
                   ),
                   padding: const EdgeInsetsDirectional.only(
                     start: 20,
@@ -56,6 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: ListView(
                     physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
                     padding: const EdgeInsetsDirectional.only(
                       top: 40,
                     ),
@@ -113,20 +115,21 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       const SizedBox(height: 5),
                       RichText(
-                          textAlign: TextAlign.end,
-                          text: const TextSpan(
-                            text: 'Forget Password?',
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w400,
-                              decoration: TextDecoration.underline,
-                              color: Color(0xFFFF3D00),
-                            ),
-                          )),
+                        textAlign: TextAlign.end,
+                        text: const TextSpan(
+                          text: 'Forget Password?',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400,
+                            decoration: TextDecoration.underline,
+                            color: Color(0xFFFF3D00),
+                          ),
+                        ),
+                      ),
                       const SizedBox(height: 20),
                       ButtonLogin(
                         text: 'Login',
-                        function: (){},
+                        function: () {},
                       ),
                       const SizedBox(height: 24),
                       const Text(
@@ -138,10 +141,29 @@ class _LoginScreenState extends State<LoginScreen> {
                           color: Color(0xFF08063A),
                         ),
                       ),
+                      const SizedBox(height: 5),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: CardLogin(
+                              title: 'Facebook',
+                              image: 'images/facebook.png',
+                            ),
+                          ),
+                          SizedBox(width: 5),
+                          Expanded(
+                            child: CardLogin(
+                              title: 'Google',
+                              image: 'images/google.png',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 23),
                       Center(
                         child: RichText(
                           text: const TextSpan(
-                            text: 'Have any account ? ',
+                            text: 'Don\'t Have any account ? ',
                             style: TextStyle(
                               color: Color(0xFF08063A),
                               fontSize: 15,
@@ -149,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             children: [
                               TextSpan(
-                                text: 'Login',
+                                text: 'Sign up ',
                                 style: TextStyle(
                                   color: Color(0xFFFF3D00),
                                   fontSize: 15,
