@@ -73,6 +73,14 @@ flutter:
     - images/GridView1.png
     - images/facebook.png
     - images/google.png
+    - images/profile.png
+    - images/pizza1.png
+    - images/pizza2.png
+    - images/pizza3.png
+    - images/purger1.png
+    - images/pngegg2.png
+    - images/pngegg3.png
+    - images/heart.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

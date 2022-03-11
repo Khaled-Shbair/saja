@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:saja/screen/Departments1_Screen.dart';
+import 'package:saja/screen/Departments_Screen.dart';
 import 'package:saja/screen/Forget_Password_Change_Password_Screen.dart';
 import 'package:saja/screen/Forget_Password_Code_Phone_Screen.dart';
 import 'package:saja/screen/Forget_Password_Screen.dart';
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/ForgetPasswordScreen',
+      initialRoute: '/DepartmentsScreen',
       routes: {
         '/SplashScreen': (context) => const SplashScreen(),
         '/WelcomeScreen': (context) => const WelcomeScreen(),
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
         '/ForgetPasswordCodePhoneScreen': (context) => const ForgetPasswordCodePhoneScreen(),
         '/ForgetPasswordChangePasswordScreen': (context) => const ForgetPasswordChangePasswordScreen(),
         '/HomeScreen': (context) => const HomeScreen(),
+        '/DepartmentsScreen': (context) => const DepartmentsScreen(),
+        '/Departments1Screen': (context) => const Departments1Screen(),
       },
     );
   }

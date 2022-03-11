@@ -58,6 +58,7 @@ class _HomeScreenState extends State<HomeScreen>
           ),
         ],
       ),
+
       body: SafeArea(
         child: PageView(
           children:[
